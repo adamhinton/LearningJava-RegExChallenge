@@ -1,5 +1,7 @@
 package dev.lpa;
 
+import java.util.List;
+
 public class Main {
     public static void main(String[] args) {
 
@@ -16,15 +18,38 @@ public class Main {
 
         String ch2 = "^[A-Z][a-z]*.*\\.$";
 
-        System.out.println("Abdfas.".matches(ch2));
-        System.out.println("Ab.".matches(ch2));
-        System.out.println("A.".matches(ch2));
-        System.out.println("A fsdfasa .".matches(ch2));
-        System.out.println("Abdfas".matches(ch2));
-        System.out.println("bdfas".matches(ch2));
-        System.out.println("bdfas".matches(ch2));
+        for (String s : List.of(
+                "The bike is red.",
+                "I am a new student.",
+                "hello world.",
+                "How are you?"
+        )){
+            boolean matched = s.matches(ch2);
+            System.out.println(s.matches(ch2));
+        }
+
+//        System.out.println("Abdfas.".matches(ch2));
+//        System.out.println("Ab.".matches(ch2));
+//        System.out.println("A.".matches(ch2));
+//        System.out.println("A fsdfasa .".matches(ch2));
+//        System.out.println("Abdfas".matches(ch2));
+//        System.out.println("bdfas".matches(ch2));
+//        System.out.println("bdfas".matches(ch2));
 
 
-        System.out.println("-------------------");
+        System.out.println("Starting challenge 3 -------------------");
+
+
+        String ch3 = "[A-Z].+[.?!]";
+
+        for (String s : List.of(
+                "The bike is red, and has flat tires.",
+                "I love being a new L.P.A. student!",
+                "Hello, friends and family: Welcome!",
+                "How are you, Mary?"
+        )){
+            boolean matched = s.matches(ch3);
+            System.out.println(s.matches(ch3));
+        }
     }
 }
