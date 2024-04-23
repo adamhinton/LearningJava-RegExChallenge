@@ -14,13 +14,17 @@ public class Main {
         // [2]
             // regex: starting with uppercase letter, followed by zero or more lowercase letters, ending with period
 
-        String ch2 = "[A-Z].*\\.";
+        String ch2 = "^[A-Z][a-z]*.*\\.$";
 
         System.out.println("Abdfas.".matches(ch2));
         System.out.println("Ab.".matches(ch2));
         System.out.println("A.".matches(ch2));
+        System.out.println("A fsdfasa .".matches(ch2));
         System.out.println("Abdfas".matches(ch2));
         System.out.println("bdfas".matches(ch2));
         System.out.println("bdfas".matches(ch2));
+
+
+        System.out.println("-------------------");
     }
 }
